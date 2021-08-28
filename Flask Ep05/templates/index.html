@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+
+    <title>Covid Tracker</title>
+
+    <style>
+      form {
+        margin: 30px auto;
+        width: 90% !important;
+      }
+
+      form h2 {
+        margin: 20px 0px 30px 0px;
+      }
+
+      form input,
+      label{
+        margin: 5px 0px;
+      }
+      .container{
+        width: 90% !important;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="container" method="post">
+      <h2><i class="bi bi-brightness-high-fill"></i> Covid Tracker</h2>
+
+      <div class="form-group">
+        <label>State Name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="State Name"
+          name="name"
+        />
+      </div>
+
+      <br />
+      <button type="submit" class="btn btn-primary">Fetch Now</button>
+    </form>
+
+
+    <div class="container">
+      <div class="row">
+     
+
+        <div class="col-sm-3">
+          <div class="card text-white bg-dark mb-3" style="max-width: 20rem">
+            <div class="card-body">
+              <h4 class="card-title">Active Cases</h4>
+              <p class="card-text">{{ data.active }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card text-white bg-dark mb-3" style="max-width: 20rem">
+            <div class="card-body">
+              <h4 class="card-title">Cured Cases</h4>
+              <p class="card-text">{{ data.cured }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card text-white bg-dark mb-3" style="max-width: 20rem">
+            <div class="card-body">
+              <h4 class="card-title">Death Cases</h4>
+              <p class="card-text"> {{ data.death }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
