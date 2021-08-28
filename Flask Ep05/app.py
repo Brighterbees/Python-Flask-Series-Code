@@ -4,7 +4,7 @@ from flask.globals import request
 app = Flask(__name__) #Initialise app
 
 # Config
-from covid_india import states
+from covid_india import states # pip install covid_india
 
 
 @app.route('/', methods = ['GET', 'POST'])
