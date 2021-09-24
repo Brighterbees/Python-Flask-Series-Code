@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+
+  <title>CRUD App</title>
+
+  <style>
+    form {
+      margin: 30px auto;
+      width: 90% !important;
+    }
+
+    form h2 {
+      margin: 20px 0px 30px 0px;
+    }
+
+    form input,
+    label {
+      margin: 5px 0px;
+    }
+
+    .container {
+      width: 90% !important;
+    }
+
+    .info {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="container" method="post">
+
+    <h2> Add Student</h2>
+    </h2>
+
+    <div class="form-group">
+      <label>Student Name</label>
+      <input type="text" class="form-control" placeholder="Student Name" name="name" />
+    </div>
+
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" class="form-control" placeholder="Email address" name="email" />
+    </div>
+
+    <div class="form-group">
+      <label>Contact Number</label>
+      <input type="number" class="form-control" placeholder="Contact Number" name="contact" />
+    </div>
+
+    <div class="form-group">
+      <label>Course Name</label>
+      <input type="text" class="form-control" placeholder="Course Name" name="course" />
+    </div>
+
+
+
+
+
+    <br />
+    <button type="submit" class="btn btn-primary">Submit Now</button>
+
+  </form>
+</body>
+
+</html>
